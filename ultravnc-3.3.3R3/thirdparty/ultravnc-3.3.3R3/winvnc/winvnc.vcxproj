@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{154DC057-45AB-4E84-A661-589F9163062C}</ProjectGuid>
+    <RootNamespace>winvnc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.21006.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\Microsoft_DirectX_SDK_February_2010;$(SolutionDir)thirdparty\ultravnc-3.3.3R3;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)thirdparty\lzma-5.2.5\src\liblzma\api;$(SolutionDir)thirdparty\jpeg-turbo-2.1.3\include;$(SolutionDir)thirdparty\minilzo-2.10</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;__WIN32__;WIN32;_WINDOWS;_WIN32_WINNT=0x501;_CRT_SECURE_NO_WARNINGS;_WIN32_IE=0x0600;</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libavilog.lib;libzlib.lib;libminilzo.lib;libturbojpeg.lib;librdr.lib;librfb.lib;libcommon.lib;libomnithread_server.lib;libzip.lib;libunzip.lib;libZipUnZip32.lib;vnchooks.lib;comctl32.lib;winmm.lib;ws2_32.lib;user32.lib;gdi32.lib;comdlg32.lib;advapi32.lib;shell32.lib;oleaut32.lib;version.lib;wtsapi32.lib;userenv.lib</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <Profile>true</Profile>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\Microsoft_DirectX_SDK_February_2010;$(SolutionDir)thirdparty\ultravnc-3.3.3R3;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)thirdparty\lzma-5.2.5\src\liblzma\api;$(SolutionDir)thirdparty\jpeg-turbo-2.1.3\include;$(SolutionDir)thirdparty\minilzo-2.10</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;__WIN32__;WIN32;_WINDOWS;_WIN32_WINNT=0x501;_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libavilog.lib;libzlib.lib;libminilzo.lib;libturbojpeg.lib;librdr.lib;librfb.lib;libcommon.lib;libomnithread_server.lib;libzip.lib;libunzip.lib;libZipUnZip32.lib;vnchooks.lib;comctl32.lib;winmm.lib;ws2_32.lib;user32.lib;gdi32.lib;comdlg32.lib;advapi32.lib;shell32.lib;oleaut32.lib;version.lib;wtsapi32.lib;userenv.lib</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateManifest>true</GenerateManifest>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <Profile>true</Profile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="benchmark.cpp" />
+    <ClCompile Include="black_layered.cpp">
+    </ClCompile>
+    <ClCompile Include="blankmonitor.cpp" />
+    <ClCompile Include="buildtime.cpp">
+    </ClCompile>
+    <ClCompile Include="CpuUsage.cpp" />
+    <ClCompile Include="d3des.c">
+    </ClCompile>
+    <ClCompile Include="Dtwinver.cpp" />
+    <ClCompile Include="getinfo.cpp" />
+    <ClCompile Include="helpers.cpp" />
+    <ClCompile Include="HideDesktop.cpp">
+    </ClCompile>
+    <ClCompile Include="inifile.cpp">
+    </ClCompile>
+    <ClCompile Include="IPC.cpp" />
+    <ClCompile Include="read_write_ini.cpp" />
+    <ClCompile Include="rfbRegion_win32.cpp" />
+    <ClCompile Include="rfbRegion_X11.cxx">
+    </ClCompile>
+    <ClCompile Include="rfbUpdateTracker.cpp">
+    </ClCompile>
+    <ClCompile Include="security.cpp">
+    </ClCompile>
+    <ClCompile Include="service.cpp" />
+    <ClCompile Include="service_motor.cpp" />
+    <ClCompile Include="stdhdrs.cpp">
+    </ClCompile>
+    <ClCompile Include="TextChat.cpp">
+    </ClCompile>
+    <ClCompile Include="translate.cpp">
+    </ClCompile>
+    <ClCompile Include="uvncUiAccess.cpp" />
+    <ClCompile Include="videodriver.cpp">
+    </ClCompile>
+    <ClCompile Include="videodrivercheck.cpp">
+    </ClCompile>
+    <ClCompile Include="vistahook.cpp" />
+    <ClCompile Include="vncabout.cpp">
+    </ClCompile>
+    <ClCompile Include="vncacceptdialog.cpp">
+    </ClCompile>
+    <ClCompile Include="vncauth.c">
+    </ClCompile>
+    <ClCompile Include="vncbuffer.cpp">
+    </ClCompile>
+    <ClCompile Include="vncclient.cpp">
+    </ClCompile>
+    <ClCompile Include="vncconndialog.cpp">
+    </ClCompile>
+    <ClCompile Include="vncdesktop.cpp">
+    </ClCompile>
+    <ClCompile Include="vncdesktopsink.cpp" />
+    <ClCompile Include="vncDesktopSW.cpp">
+    </ClCompile>
+    <ClCompile Include="vncdesktopthread.cpp">
+    </ClCompile>
+    <ClCompile Include="vncencodecorre.cpp">
+    </ClCompile>
+    <ClCompile Include="vncencodehext.cpp">
+    </ClCompile>
+    <ClCompile Include="vncencoder.cpp">
+    </ClCompile>
+    <ClCompile Include="vncencoderCursor.cpp">
+    </ClCompile>
+    <ClCompile Include="vncencoderre.cpp">
+    </ClCompile>
+    <ClCompile Include="vncEncodeTight.cpp">
+    </ClCompile>
+    <ClCompile Include="vncEncodeUltra.cpp">
+    </ClCompile>
+    <ClCompile Include="vncEncodeUltra2.cpp" />
+    <ClCompile Include="vncEncodeZlib.cpp">
+    </ClCompile>
+    <ClCompile Include="vncEncodeZlibHex.cpp">
+    </ClCompile>
+    <ClCompile Include="vncencodezrle.cpp">
+    </ClCompile>
+    <ClCompile Include="vnchttpconnect.cpp">
+    </ClCompile>
+    <ClCompile Include="vncinsthandler.cpp">
+    </ClCompile>
+    <ClCompile Include="vnckeymap.cpp">
+    </ClCompile>
+    <ClCompile Include="vncListDlg.cpp">
+    </ClCompile>
+    <ClCompile Include="vnclog.cpp">
+    </ClCompile>
+    <ClCompile Include="vncmenu.cpp">
+    </ClCompile>
+    <ClCompile Include="vncMultiMonitor.cpp">
+    </ClCompile>
+    <ClCompile Include="vncntlm.cpp">
+    </ClCompile>
+    <ClCompile Include="vncOSVersion.cpp">
+    </ClCompile>
+    <ClCompile Include="vncproperties.cpp">
+    </ClCompile>
+    <ClCompile Include="vncpropertiesPoll.cpp">
+    </ClCompile>
+    <ClCompile Include="vncserver.cpp">
+    </ClCompile>
+    <ClCompile Include="vncservice.cpp">
+    </ClCompile>
+    <ClCompile Include="vncsetauth.cpp">
+    </ClCompile>
+    <ClCompile Include="vncsockconnect.cpp">
+    </ClCompile>
+    <ClCompile Include="vnctimedmsgbox.cpp">
+    </ClCompile>
+    <ClCompile Include="vsocket.cpp">
+    </ClCompile>
+    <ClCompile Include="winvnc.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CpuUsage.h" />
+    <ClInclude Include="Dtwinver.h" />
+    <ClInclude Include="d3des.h" />
+    <ClInclude Include="helpers.h" />
+    <ClInclude Include="HideDesktop.h" />
+    <ClInclude Include="inifile.h" />
+    <ClInclude Include="IPC.h" />
+    <ClInclude Include="keysymdef.h" />
+    <ClInclude Include="Localization.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rfbMisc.h" />
+    <ClInclude Include="..\..\rfb\rfbproto.h" />
+    <ClInclude Include="rfbRect.h" />
+    <ClInclude Include="rfbRegion.h" />
+    <ClInclude Include="rfbRegion_win32.h" />
+    <ClInclude Include="rfbRegion_X11.h" />
+    <ClInclude Include="rfbUpdateTracker.h" />
+    <ClInclude Include="stdhdrs.h" />
+    <ClInclude Include="TextChat.h" />
+    <ClInclude Include="translate.h" />
+    <ClInclude Include="uvncUiAccess.h" />
+    <ClInclude Include="videodriver.h" />
+    <ClInclude Include="vncabout.h" />
+    <ClInclude Include="vncacceptdialog.h" />
+    <ClInclude Include="vncauth.h" />
+    <ClInclude Include="vncbuffer.h" />
+    <ClInclude Include="vncclient.h" />
+    <ClInclude Include="vncconndialog.h" />
+    <ClInclude Include="vncdesktop.h" />
+    <ClInclude Include="vncdesktopthread.h" />
+    <ClInclude Include="vncencodecorre.h" />
+    <ClInclude Include="vncencodehext.h" />
+    <ClInclude Include="vncencodemgr.h" />
+    <ClInclude Include="vncencoder.h" />
+    <ClInclude Include="vncencoderre.h" />
+    <ClInclude Include="vncEncodeTight.h" />
+    <ClInclude Include="vncEncodeUltra.h" />
+    <ClInclude Include="vncEncodeUltra2.h" />
+    <ClInclude Include="vncEncodeZlib.h" />
+    <ClInclude Include="vncEncodeZlibHex.h" />
+    <ClInclude Include="vncencodezrle.h" />
+    <ClInclude Include="vnchttpconnect.h" />
+    <ClInclude Include="vncinsthandler.h" />
+    <ClInclude Include="vnckeymap.h" />
+    <ClInclude Include="vncListDlg.h" />
+    <ClInclude Include="vnclog.h" />
+    <ClInclude Include="vncmenu.h" />
+    <ClInclude Include="vncpasswd.h" />
+    <ClInclude Include="vncproperties.h" />
+    <ClInclude Include="vncpropertiesPoll.h" />
+    <ClInclude Include="vncserver.h" />
+    <ClInclude Include="vncservice.h" />
+    <ClInclude Include="vncsetauth.h" />
+    <ClInclude Include="vncsockconnect.h" />
+    <ClInclude Include="vnctimedmsgbox.h" />
+    <ClInclude Include="vsocket.h" />
+    <ClInclude Include="vtypes.h" />
+    <ClInclude Include="winvnc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="winvnc.rc">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\mslogon\AuthPanel.class" />
+    <None Include="res\mslogon\ButtonPanel.class" />
+    <None Include="res\mslogon\ClipboardFrame.class" />
+    <None Include="res\mslogon\DesCipher.class" />
+    <None Include="res\mslogon\DH.class" />
+    <None Include="res\mslogon\FTPFrame$StrComp.class" />
+    <None Include="res\mslogon\FTPFrame.class" />
+    <None Include="res\mslogon\OptionsFrame.class" />
+    <None Include="res\mslogon\RecordingFrame.class" />
+    <None Include="res\mslogon\RfbProto.class" />
+    <None Include="res\mslogon\SessionRecorder.class" />
+    <None Include="res\mslogon\VncCanvas.class" />
+    <None Include="res\mslogon\VncViewer.class" />
+    <None Include="res\mslogon\VncViewer.jar" />
+    <None Include="vnc.hh" />
+    <None Include="res\background.bmp" />
+    <None Include="res\background2.bmp" />
+    <None Include="res\clipboardframe.class" />
+    <None Include="res\descipher.class" />
+    <None Include="res\Finger.cur" />
+    <None Include="res\ico00001.ico" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\icon2.ico" />
+    <None Include="res\optionsframe.class" />
+    <None Include="res\rfbproto.class" />
+    <None Include="res\runas.bmp" />
+    <None Include="res\vdacc.bmp" />
+    <None Include="res\vnc-1.bmp" />
+    <None Include="res\vnc-1.ico" />
+    <None Include="vnc.bmp" />
+    <None Include="res\vnc.bmp" />
+    <None Include="res\vnc64.BMP" />
+    <None Include="res\vnccanvas.class" />
+    <None Include="res\vncviewer.class" />
+    <None Include="res\vncviewer.jar" />
+    <None Include="res\winvnc.ico" />
+    <None Include="res\world3a.ico" />
+    <None Include="res\ww-grn-sq2.ico" />
+    <None Include="res\AuthPanel.class" />
+    <None Include="..\..\BUILDING.txt" />
+    <None Include="..\building.txt" />
+    <None Include="res\ButtonPanel.class" />
+    <None Include="res\DH.class" />
+    <None Include="res\ding_dong.wav" />
+    <None Include="res\ftpframe$strcomp.class" />
+    <None Include="res\FTPFrame.class" />
+    <None Include="..\history.txt" />
+    <None Include="..\..\LICENCE.txt" />
+    <None Include="..\README_BINARY.txt" />
+    <None Include="res\RecordingFrame.class" />
+    <None Include="res\SessionRecorder.class" />
+    <None Include="VTune\winvnc.vpj" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

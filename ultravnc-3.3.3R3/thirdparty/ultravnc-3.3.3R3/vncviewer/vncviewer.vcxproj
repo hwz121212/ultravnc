@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{357D07B6-0613-4B05-9D22-1764A49AC945}</ProjectGuid>
+    <RootNamespace>vncviewer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PostBuildEventUseInBuild>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..;$(SolutionDir)include\Microsoft_DirectX_SDK_February_2010;$(SolutionDir)thirdparty\ultravnc-3.3.3R3;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)thirdparty\lzma-5.2.5\src\liblzma\api;$(SolutionDir)thirdparty\jpeg-turbo-2.1.3\include;$(SolutionDir)thirdparty\minilzo-2.10</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;__NT__;_WINSTATIC;__WIN32__;_CRT_SECURE_NO_WARNINGS;_VIEWER;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Message>Setting build time...</Message>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libzlib.lib;libminilzo.lib;libturbojpeg.lib;librdr.lib;librfb.lib;libcommon.lib;libomnithread_client.lib;libzip.lib;libunzip.lib;libZipUnZip32.lib;comctl32.lib;winmm.lib;ws2_32.lib;user32.lib;gdi32.lib;comdlg32.lib;advapi32.lib;shell32.lib;oleaut32.lib</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..;$(SolutionDir)include\Microsoft_DirectX_SDK_February_2010;$(SolutionDir)thirdparty\ultravnc-3.3.3R3;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)thirdparty\lzma-5.2.5\src\liblzma\api;$(SolutionDir)thirdparty\jpeg-turbo-2.1.3\include;$(SolutionDir)thirdparty\minilzo-2.10</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;__NT__;_WINSTATIC;__WIN32__;_CRT_SECURE_NO_WARNINGS;_VIEWER;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <StringPooling>true</StringPooling>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Message>Setting build time...</Message>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libzlib.lib;libminilzo.lib;libturbojpeg.lib;librdr.lib;librfb.lib;libcommon.lib;libomnithread_client.lib;libzip.lib;libunzip.lib;libZipUnZip32.lib;comctl32.lib;winmm.lib;ws2_32.lib;user32.lib;gdi32.lib;comdlg32.lib;advapi32.lib;shell32.lib;oleaut32.lib</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="res\B46.ico" />
+    <None Include="res\stat\back.bmp" />
+    <None Include="res\background2.bmp" />
+    <None Include="res\stat\background2.bmp" />
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\bitmap2.bmp" />
+    <None Include="res\stat\bitmap4.bmp" />
+    <None Include="res\stat\bitmap5.bmp" />
+    <None Include="res\stat\bitmap8.bmp" />
+    <None Include="res\stat\bitmap9.bmp" />
+    <None Include="res\stat\both.bmp" />
+    <None Include="res\stat\closeup.bmp" />
+    <None Include="res\cursor1.cur" />
+    <None Include="res\cursorsel.cur" />
+    <None Include="res\dir.ico" />
+    <None Include="res\drive.ico" />
+    <None Include="res\file.ico" />
+    <None Include="res\Finger.cur" />
+    <None Include="res\stat\flash.bmp" />
+    <None Include="res\stat\front.bmp" />
+    <None Include="res\hoch.bmp" />
+    <None Include="res\idr_tray.ico" />
+    <None Include="res\idr_tray_disabled.ico" />
+    <None Include="res\l1.bmp" />
+    <None Include="res\l2.bmp" />
+    <None Include="res\stat\mainicon.ico" />
+    <None Include="res\stat\maximizeup.bmp" />
+    <None Include="res\stat\minimizeup.bmp" />
+    <None Include="res\nocursor.cur" />
+    <None Include="res\stat\none.bmp" />
+    <None Include="res\stat\pindown.bmp" />
+    <None Include="res\stat\pinup.bmp" />
+    <None Include="res\quer.bmp" />
+    <None Include="Tango_l.bmp" />
+    <None Include="res\Tango_l.bmp" />
+    <None Include="res\Tango_lx.bmp" />
+    <None Include="Tango_lx.bmp" />
+    <None Include="Tango_s.bmp" />
+    <None Include="res\Tango_s.bmp" />
+    <None Include="Tango_sx.bmp" />
+    <None Include="res\Tango_sx.bmp" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="res\toollb_large.bmp" />
+    <None Include="res\toollb_largecolor.bmp" />
+    <None Include="res\toollb_largecolormx.bmp" />
+    <None Include="res\toollb_largemouseX.bmp" />
+    <None Include="res\toollb_small.bmp" />
+    <None Include="res\toollb_smallcolor.bmp" />
+    <None Include="res\toollb_smallcolormx.bmp" />
+    <None Include="res\toollb_smallmouseX.bmp" />
+    <None Include="res\ultra-logo.bmp" />
+    <None Include="res\vnc.bmp" />
+    <None Include="res\vnc32.BMP" />
+    <None Include="res\vnc64.BMP" />
+    <None Include="res\vncviewer.ico" />
+    <None Include="COPYING.txt" />
+    <None Include="History.txt" />
+    <None Include="LICENCE.txt" />
+    <None Include="ToDo.txt" />
+    <None Include="VTune\vncviewer.vpj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AccelKeys.cpp">
+    </ClCompile>
+    <ClCompile Include="AuthDialog.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnection.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionCacheRect.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionClipboard.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionCopyRect.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionCoRRE.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionCursor.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionFile.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionFullScreen.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionHextile.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionRaw.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionRRE.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionTight.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionUltra.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionUltra2.cpp" />
+    <ClCompile Include="ClientConnectionZlib.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientConnectionZlibHex.cpp">
+    </ClCompile>
+    <ClCompile Include="d3des.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Daemon.cpp">
+    </ClCompile>
+    <ClCompile Include="directx\directxviewer.cpp" />
+    <ClCompile Include="display.cpp" />
+    <ClCompile Include="Exception.cpp">
+    </ClCompile>
+    <ClCompile Include="FileTransfer.cpp">
+    </ClCompile>
+    <ClCompile Include="FullScreenTitleBar.cpp">
+    </ClCompile>
+    <ClCompile Include="KeyMap.cpp">
+    </ClCompile>
+    <ClCompile Include="KeyMapjap.cpp" />
+    <ClCompile Include="Log.cpp">
+    </ClCompile>
+    <ClCompile Include="LowLevelHook.cpp">
+    </ClCompile>
+    <ClCompile Include="MRU.cpp">
+    </ClCompile>
+    <ClCompile Include="SessionDialog.cpp">
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TextChat.cpp">
+    </ClCompile>
+    <ClCompile Include="vncauth.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VNCOptions.cpp">
+    </ClCompile>
+    <ClCompile Include="vncviewer.cpp">
+    </ClCompile>
+    <ClCompile Include="VNCviewerApp.cpp">
+    </ClCompile>
+    <ClCompile Include="VNCviewerApp32.cpp">
+    </ClCompile>
+    <ClCompile Include="zrle.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccelKeys.h" />
+    <ClInclude Include="AuthDialog.h" />
+    <ClInclude Include="ClientConnection.h" />
+    <ClInclude Include="d3des.h" />
+    <ClInclude Include="Daemon.h" />
+    <ClInclude Include="directx\directxviewer.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="FileTransfer.h" />
+    <ClInclude Include="FullScreenTitleBar.h" />
+    <ClInclude Include="FullScreenTitleBarConst.h" />
+    <ClInclude Include="KeyMap.h" />
+    <ClInclude Include="KeyMapjap.h" />
+    <ClInclude Include="keysymdef.h" />
+    <ClInclude Include="keysymdefjap.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="LowLevelHook.h" />
+    <ClInclude Include="MRU.h" />
+    <ClInclude Include="multimon.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="SessionDialog.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TextChat.h" />
+    <ClInclude Include="vncauth.h" />
+    <ClInclude Include="VNCOptions.h" />
+    <ClInclude Include="vncviewer.h" />
+    <ClInclude Include="VNCviewerApp.h" />
+    <ClInclude Include="VNCviewerApp32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\vncviewer.rc">
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

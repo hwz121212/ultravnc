@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="x86_64\jsimd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8694F637-4B82-326F-88A5-AD39B09C7E56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obj">
+      <UniqueIdentifier>{0a15b2b6-9e7f-4b14-bbdb-f1566ee6c538}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="obj\jccolor-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jccolor-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jcgray-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jcgray-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jchuff-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jcphuff-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jcsample-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jcsample-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jdcolor-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jdcolor-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jdmerge-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jdmerge-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jdsample-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jdsample-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jfdctflt-sse.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jfdctfst-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jfdctint-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jfdctint-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jidctflt-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jidctfst-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jidctint-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jidctint-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jidctred-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jquantf-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jquanti-avx2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jquanti-sse2.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\jsimdcpu.asm.obj">
+      <Filter>obj</Filter>
+    </Object>
+  </ItemGroup>
+</Project>
